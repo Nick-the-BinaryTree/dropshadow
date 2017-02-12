@@ -1,13 +1,20 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dropshadow</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-    <h1>Dropshadow</h1>
-    <p>"The biggest problem with being alive is that you can only see the world out of your own eyes."
-    <br> - John Green
-    </p>
+    <h1><a href="/">Dropshadow</a></h1>
+    {% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p class = "publish_date">{{ post.published_date }}</p>
+        <p>{{ post.text | linebreaksbr }}</p>
+    </div>
+    {% endfor %}
 </body>
 </html>
