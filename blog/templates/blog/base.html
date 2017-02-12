@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropshadow</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <h1><a href="/">Dropshadow</a></h1>
+    <table id="nav">
+        <tr>
+            <th class="nav_link">About</th>
+            <th id="search">Search _____________</th>
+        </tr>
+    </table>
+    {% block content %}
+    {% endblock %}
+    <hr>
+</body>
+</html>
