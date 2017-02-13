@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="page">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.text|linebreaksbr }}</p>
+        <br><br><br>
+    </div>
+{% endblock %}
