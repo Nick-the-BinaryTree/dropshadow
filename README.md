@@ -1,5 +1,5 @@
 # dropshadow
-Minimalist blog platform
+Minimalist blog platform.
 
 Pure Django, HTML, and CSS.
 
