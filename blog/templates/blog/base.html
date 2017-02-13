@@ -14,7 +14,6 @@
             {% for page in pages %}
             <th class="nav_link"><a href="{% url 'page' pg=page.title %}">{{ page.title }}</a></th>
             {% endfor %}
-            <th id="search">Search _____________</th>
         </tr>
     </table>
     {% block content %}

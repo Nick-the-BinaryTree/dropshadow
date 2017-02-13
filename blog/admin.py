@@ -7,14 +7,14 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'published_date')
     list_filter = ['published_date']
 
-    def save_model(self, request, obj, form, change):
+    def save_model(self, request, obj, form, change): # So logged-in user is author by default
         obj.author = request.user
         obj.save()
 
 class PageAdmin(admin.ModelAdmin):
     fields = ['title', 'text']
 
-    def save_model(self, request, obj, form, change): # So logged-in user is author by default
+    def save_model(self, request, obj, form, change):
         obj.author = request.user
         obj.save()
 
