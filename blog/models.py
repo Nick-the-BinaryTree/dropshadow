@@ -3,7 +3,7 @@ from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey('auth.User', default='')
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
@@ -29,3 +29,9 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+
+class BlogTitle(models.Model):
+    text = models.CharField(max_length=200, default="Dropshadow")
+
+    def __str__(self):
+        return self.text
